@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page with Registration Modal</title>
+    <link rel="stylesheet" href="logreg.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <form action="home.html">
+            <h1>Login</h1>
+            <label for="Username">Username or Email:</label>
+            <input type="text" id="Username" name="Username" placeholder="Enter username or email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+            <button type="submit">Login</button>
+
+            <p>
+                Don't have an account?
+                <a onclick="document.getElementById('modal').classList.add('active')">Register</a>
+            </p>
+        </form>
+    </div>
+
+
+    <div class="modal" id="modal">
+        <div class="form-container2">
+            <div class="close-modal">
+                <a onclick="document.getElementById('modal').classList.remove('active')">&times; </a>
+            </div>
+            <form>
+                <h1>Registration</h1>
+                <div class="row">
+                    <div class="half">
+                        <label>??????? First Name:</label>
+                        <input type="text" placeholder="Your First Name" required>
+                    </div>
+                    <div class="half">
+                        <label>???????Last Name:</label>
+                        <input type="text" placeholder="Your Last Name" required>
+                    </div>
+                    <div class="half">
+                        <label>?? Email:</label>
+                        <input type="email" placeholder="Enter Email ID" required>
+                    </div>
+                    <div class="half">
+                        <label>?? Password:</label>
+                        <input type="password" placeholder="Enter Password" required>
+                    </div>
+                    <div class="half">
+                        <label>? Confirm Password:</label>
+                        <input type="password" placeholder="Confirm Password" required>
+                    </div>
+                    <div class="half">
+                        <label class="gender-label">?? Gender:</label>
+                        <div class="gender-group">
+                            <label><input type="radio" name="gender" value="male" required> Male</label>
+                            <label><input type="radio" name="gender" value="female" required> Female</label>
+                            <label><input type="radio" name="gender" value="other" required> Other</label>
+                        </div>
+                    </div>
+
+                    <div class="half">
+                        <label>?? Address</label>
+                        <textarea required style="width: 100%; height: 50px;"></textarea>
+                    </div>
+                    <div class="half">
+                        <label>?? Countries:</label>
+                        <select required>
+                            <option disabled selected>Select Country</option>
+                            <option value="india">India</option>
+                            <option value="brazil">Brazil</option>
+                            <option value="australia">Australia</option>
+                            <option value="new zealand">New Zealand</option>
+                            <option value="china">China</option>
+                            <option value="south korea">South Korea</option>
+                            <option value="france">France</option>
+                            <option value="germany">Germany</option>
+                        </select>
+                    </div>
+                    <div class="half">
+                        <label>??? State:</label>
+                        <select required>
+                            <option>Select State</option>
+                            <option disabled selected>Select State</option>
+                            <option value="gujarat">Gujarat</option>
+                            <option value="kerala">Kerala</option>
+                            <option value="punjab">Punjab</option>
+                            <option value="haryana">Haryana</option>
+                            <option value="acre">Acre</option>
+                            <option value="amazonas">Amazonas</option>
+                            <option value="victoria">Victoria</option>
+                            <option value="tasmania">Tasmania</option>
+                            <option value="northland">Northland</option>
+                        </select>
+                    </div>
+                    <div class="half">
+                        <label>??? City:</label>
+                        <select required>
+                            <option value="rajkot">Rajkot</option>
+                            <option value="ahmedabad">Ahmedabad</option>
+                            <option value="chandigarh">Chandigarh</option>
+                            <option value="gurgaon">Gurgaon</option>
+                            <option value="kochi">Kochi</option>
+                            <option value="thiruvananthapuram">Thiruvananthapuram</option>
+                            <option value="amritsar">Amritsar</option>
+                            <option value="ludhiana">Ludhiana</option>
+                            <option value="jaipur">Jaipur</option>
+                            <option value="udaipur">Udaipur</option>
+                            <option value="burnie">Burnie</option>
+                            <option value="kingston">Kingston</option>
+                            <option value="ballarat">Ballarat</option>
+                            <option value="melbourne">Melbourne</option>
+                            <option value="russell">Russell</option>
+                            <option value="dargaville">Dargaville</option>
+                        </select>
+                    </div>
+                    <div class="half">
+                        <label>?? Age:</label>
+                        <input type="number" placeholder="Your Age" required>
+                    </div>
+                    <div class="half">
+                        <label>?? Phone:</label>
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <div class="half">
+                        <label>?? Website:</label>
+                        <input type="url" placeholder="http://example.com">
+                    </div>
+                    <div class="half">
+                        <label>?? Resume:</label>
+                        <input type="file">
+                    </div>
+                    <div class="half">
+                        <label>?? Date of Birth:</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="half">
+                        <label>??? Contact Time:</label>
+                        <input type="time">
+                    </div>
+                    <div class="half">
+                        <label>?? Birth Month:</label>
+                        <input type="month">
+                    </div>
+                    <div class="half">
+                        <label>?? Preferred Week:</label>
+                        <input type="week">
+                    </div>
+                    <div class="half">
+                        <label>?? Satisfaction (1–10):</label>
+                        <input type="range" min="1" max="10">
+                    </div>
+                    <div class="half">
+                        <label>?? Search Interests:</label>
+                        <input type="search" placeholder="Search...">
+                    </div>
+                </div>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" required>
+                    <label>I agree to the terms & conditions</label>
+                </div>
+
+                <input type="hidden" value="student">
+
+                <button type="submit">Register</button>
+                <p>Already have an account? <a onclick="document.getElementById('modal').classList.remove('active')">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
